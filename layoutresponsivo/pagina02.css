@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  font-family: "roboto", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  background-color: #252323;
+  height: 10vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.header-1 {
+  width: 980px;
+  height: 10vh;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  background-color: blueviolet;
+  top: 1rem;
+  margin-left: 15px;
+  padding: 16px;
+}
+
+.redes-sociais {
+  float: right;
+  display: flex;
+  margin: 23px;
+}
+
+.redes-sociais li {
+  display: inline-block;
+  list-style: none;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+.social-logo {
+  width: 34px;
+  height: 34px;
+}
+main {
+  width: 980px;
+  height: 10vh;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header-2 {
+  width: 980px;
+  height: 84px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  color: gray;
+  border-style: solid;
+  border-width: 3px;
+  border-image: linear-gradient(
+      To left,
+      rgba(0, 0, 0, 0) 1%,
+      #efefef 50%,
+      rgba(0, 0, 0, 0) 100%
+    )
+    100% 0 100% 0/3px 0 stretch;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.header-2 .menu {
+  height: 100%;
+  margin-left: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.header-2 .menu li {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  margin-left: 24px;
+  text-decoration: none;
+  color: blue;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.header-2 .menu li a {
+  text-decoration: none;
+  color: blue;
+}
+
+.header-2 .menu li a:hover {
+  text-decoration: none;
+  font-size: 18px;
+  color: darksalmon;
+}
+
+.search-box {
+  height: 30px;
+  border-radius: 30px;
+  border: 2px solid gray;
+  margin-top: 10px;
+  padding: 10px 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: pointer;
+  transition: 0.8s;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 0px;
+  height: 35px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.8s;
+}
+
+.search-box:hover input {
+  width: 190px;
+  transition: width 0.4s ease-in-out;
+}
+
+.slide-principal {
+  width: 100%;
+  height: 600px;
+  margin-top: 1rem;
+  display: inline-flex;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+
+.slides {
+  width: 100%;
+  height: 600px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.slides .btn {
+  position: absolute;
+  color: #efefef;
+  padding: 10px;
+  align-content: center;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-size: 1.7em;
+  margin-top: -5px;
+}
+.slides .btn:hover {
+  border: none;
+  transform: scale(1.5);
+}
+
+.imagens img {
+  width: 100%;
+  height: 600px;
+}
+
+#atual {
+  margin-left: 0;
+  transition: all 0.5s;
+}
+#voltar {
+  top: 50%;
+  left: 20%;
+}
+
+#proximo {
+  top: 50%;
+  right: 20%;
+}
+
+.dots {
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -45px;
+}
+
+.dots div {
+  transition: all 0.5s;
+  border: 2px solid red;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.dots div:hover {
+  background-color: red;
+}
+
+.imgAtual {
+  transition: all 0.5s;
+  background: red;
+}

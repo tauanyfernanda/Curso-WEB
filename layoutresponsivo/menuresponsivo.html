@@ -4,51 +4,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/estilo03.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
     <head>
         <nav>
-            <div class="logo"><a href="#">LOGO</a><div>
-                <BUtton ondblclick="ABRIRMENU()">&#99776;</BUtton>
-                <UL ID="BtoesMenu"></UL>
-                <a href="#perfil">
-                    <li><p>perfil</p></li>
-                    <a href="#carrinho">
-                        <li><p>carrinho</p></li>
-                    </a>
-                    <a href="#favoritos">
-                        <li><p>favoritos</p></li>
-                        <a href="#comprados">
-                            <li><p>comprados</p></li>
-                        </a>
-                    </a>
-                </a>
-            </nav>
+            <div class="logo">
+                <a href="#">LOGO</a>
+            <div>
+                <button onclick="abrirMenu()">&#99776;</button>
+            <ul id="botoesMenu">
+                <a href="#perfil"><li><p>perfil</p></li></a>
+                <a href="#carrinho"><li><p>carrinho</p></li></a>
+                <a href="#favoritos"><li><p>favoritos</p></li></a>
+                <a href="#comprados"><li><p>comprados</p></li></a>
+            </ul>
+        </nav>
     </head>
-    <div class="content" id="perfil" style="background-color:aqua">
+    <div class="content" id="perfil" style="background-color:red">
         <div class="height-nav"></div>
         Perfil
     </div>
-    <div class="content" id="carrinho" style="background-color:aqua">
+    <div class="content" id="carrinho" style="background-color:blueviolet">
         <div class="height-nav"></div>
         Carrinho
     </div>
-    <div class="content" id="comprados" style="background-color:aqua">
+    <div class="content" id="comprados" style="background-color:green">
         <div class="height-nav"></div>
         Comprados
     </div>
-    <div class="content" id="favoritos" style="background-color:aqua">
+    <div class="content" id="favoritos" style="background-color:yellow">
         <div class="height-nav"></div>
         Favoritos
-    <div class="content" id="sair" style="background-color:aqua">
+    <div class="content" id="sair" style="background-color:orange">
         <div class="height-nav"></div>
         Sair
     </div>
 
     <script>
-        
+        const arrayHeight = document .getElementsByClassName("height-nav");
+        const navHeight = document .getElementsByTagName("nav")[0].clientHeight;
+        for (let navHeightobj of arrayHeight) {
+            navHeightobj.style.navHeight = navHeight + "px";
+        }
+        function abrirMenu() {
+            const botoesmenu = document.getElementById("botoesMenu");
+            botoesmenu.className = botoesmenu.className.includes("responsivo")? "": "responsivo";
+        }
     </script>
 </body>
 </html>
