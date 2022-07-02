@@ -1,11 +1,13 @@
 const board = document.querySelector("[data-board]");
 const cellElements = document.querySelectorAll("[data-cell]");
-const winningmessage = document.querySelector("[data-winning-message]");
 const winningMessageTextElement = document.querySelector(
   "[data-winning-message-text]"
 );
+const winningmessage = document.querySelector("[data-winning-message]");
 const restartbutton = document.querySelector("[data-restart-button]");
+
 let iscircleturn;
+
 const winningcombinations = [
   [0, 1, 2],
   [3, 4, 5],
@@ -19,23 +21,27 @@ const winningcombinations = [
 
 const startGame = () => {
   iscircleturn = false;
+
   for (const cell of cellElements) {
     cell.classList.remove("circle");
     cell.classList.remove("x");
     cell.removeEventListener("click", handleclick);
     cell.addEventListener("click", handleclick, { once: true });
   }
+
   setBoardHoverClass();
   winningmessage.classList.remove("show-winning-message");
 };
-const endGame = (isdraw) => {
-  if (isdraw) {
-    winningMessageTextElement.innertext = "empate!";
+
+const endGame = (isDraw) => {
+  if (isDraw) {
+    winningMessageTextElement.innertext = "Empate!";
   } else {
-    winningMessageTextElement.innerHTML = iscircleturn
+    winningMessageTextElement.innertext = iscircleturn
       ? "o venceu!"
       : "x venceu!";
   }
+
   winningmessage.classList.add("show-winning-message");
 };
 
@@ -58,26 +64,34 @@ const placeMark = (cell, classToAdd) => {
 
 const setBoardHoverClass = () => {
   board.classList.remove("circle");
-  board.classList.remove(".x");
+  board.classList.remove("x");
+
   if (iscircleturn) {
     board.classList.add("circle");
   } else {
-    board.classList.add(".x");
+    board.classList.add("x");
   }
 };
+
 const swapturns = () => {
   iscircleturn = !iscircleturn;
+
   setBoardHoverClass();
 };
+
 const handleclick = (e) => {
   //colocar a marca (x ou crculo)
   const cell = e.target;
   const classToAdd = iscircleturn ? "circle" : "x";
+
   placeMark(cell, classToAdd);
+
   //verificar por vitoria
-  isWin = checkForWin(classToAdd);
+  const isWin = checkForWin(classToAdd);
+
   //verificar por empate
-  isDraw = checkForDraw();
+  const isDraw = checkForDraw();
+
   if (isWin) {
     endGame(false);
   } else if (isDraw) {
@@ -87,5 +101,7 @@ const handleclick = (e) => {
     swapturns();
   }
 };
+
 startGame();
+
 restartbutton.addEventListener("click", startGame);
