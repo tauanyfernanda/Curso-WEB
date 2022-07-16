@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+body {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  background-image: url(img/fundo.png);
+  background-position: center;
+  background-size: cover;
+  perspective: 700px;
+
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+main {
+  background-color: hwb(169 65% 2% / 0.531);
+  padding: 5px 40px;
+  margin-top: 20px;
+  padding: 5px 48px;
+  border: 2px solid rgb(red, green, blue);
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  backdrop-filter: blur(5px) saturate(70%);
+}
+
+.logo,
+.band-name,
+.headline {
+  margin: 0;
+  text-align: center;
+  font-size: 2.5em;
+  text-shadow: 0 0 0.05em #fff, 0 0 0.2em #feb705, 0 0 0.3em #d3a225;
+}
+
+.logo img {
+  color: rgb(250, 197, 73);
+  align-items: center;
+  align-content: center;
+  max-width: 300px;
+  max-height: 300px;
+  margin: 0;
+}
+
+.concerts {
+  margin: 30px 0;
+}
+
+.concerts h2 {
+  font-size: 2.5em;
+  text-shadow: 0 0 0.05em #fff, 0 0 0.2em #feb705, 0 0 0.3em #d3a225;
+}
+
+.concerts table {
+  background: #1e8ba1;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 auto;
+  width: 500px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.concerts th,
+.concerts td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.concerts th {
+  text-align: left;
+}
+
+.concerts thead th {
+  background-color: #feb705(92, 88, 88, 0.192);
+  font-size: 2.5em;
+}
+
+.concerts thead th {
+  background-color: #f6cb5e;
+  font-size: 2.5em;
+}
+
+.concerts button {
+  background-color: rgba(112, 112, 122, 0.192);
+  color: #f6cb5e;
+  border: 6px solid #d3a225;
+  border-radius: 15px;
+  padding: 15px 25px;
+  letter-spacing: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  filter: drop-shadow(0 0 15px #f6cb5e) drop-shadow(0 0 50px #04d9d9)
+    contrast(2) brightness(2);
+  transition: 0.5s;
+  text-transform: uppercase;
+}
+
+.concerts button:hover {
+  color: black;
+  background-color: white;
+  filter: drop-shadow(0 0 20px #04d9d9) contrast(2) brightness(2);
+}
