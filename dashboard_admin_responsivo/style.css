@@ -26,12 +26,12 @@
 
 /*------ Dark Theme ------*/
 .Dark-theme-variables {
-  --color-background:#181a1e;
-  --color-white:#202528;
-  --color-dark:#edeffd;
-  --color-dark-variant:#a3bdcc;
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
   --color-light: rgba(0, 0, 0, 0.4);
-  --box-shadow:0 2rem 3rem var(--color-light);
+  --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
 * {
@@ -113,7 +113,7 @@ b {
   color: var(--color-danger);
 }
 
-.sucess {
+.success {
   color: var(--color-success);
 }
 
@@ -427,7 +427,7 @@ main .recent-orders a {
 .right .recent-updates .updates {
   background: var(--color-white);
   padding: var(--card-padding);
-  border-radius:var(--card-border-radius);
+  border-radius: var(--card-border-radius);
   box-shadow: var(--box-shadow);
   transition: all 300ms ease-in-out;
 }
@@ -439,24 +439,23 @@ main .recent-orders a {
   0% {
     box-shadow: 0 0 0 4px var(--color-primary);
     opacity: 1;
-  
-}
+  }
   25% {
-  box-shadow: 0 0 0 1px var(--color-primary);
-  opacity: 1;
-}
-50% {
-  box-shadow: 0 0 0 7px var(--color-primary);
-  opacity: 1;
-}
-75% {
-  box-shadow: 0 0 0 4px var(--color-primary);
-  opacity: 1;
-}
-100% {
-  box-shadow: 0 0 0 5px var(--color-primary);
-  opacity: 1;
-}
+    box-shadow: 0 0 0 1px var(--color-primary);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 0 7px var(--color-primary);
+    opacity: 1;
+  }
+  75% {
+    box-shadow: 0 0 0 4px var(--color-primary);
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 0 5px var(--color-primary);
+    opacity: 1;
+  }
 }
 
 .right .recent-updates .updates .update {
@@ -486,60 +485,27 @@ main .recent-orders a {
   box-shadow: var(--box-shadow);
   transition: all 300ms ease-in-out;
 }
+
 .right .sales-analytics .item:hover {
   box-shadow: none;
   animation: bounceout 0.4s linear;
 }
 
-.right .sales-analytics .item .right {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 0;
-  width: 100%;
-}
 .right .sales-analytics .item .icon {
+  display: flex;
   padding: 0.6rem;
+  background: var(--color-primary);
   color: var(--color-white);
   border-radius: 50%;
-  background: var(--color--primary);
-  display: flex;
 }
-.right .sales-analytics .item .offline .icon {
+
+.right .sales-analytics .item.offline .icon {
   background: var(--color-danger);
 }
 
-.right .sales-analytics .add-product {
-  background-color: transparent;
-  color: var(--color--primary);
+.right .sales-analytics .item.add-product {
+  color: var(--color-primary);
+  background: transparent;
   display: flex;
   justify-content: space-between;
-
-  background-image: repeating-linear-gradient(
-    4deg,
-    var(--color-primary),
-    var(--color-primary) 17px,
-    transparent 17px,
-    transparent 32px,
-    var(--color-primary) 32px
-  ),
-  repeating-linear-gradient(
-  var(--color-primary),
-  var(--color--primary) 17px,
-  transparent 17px,
-  transparent 32px,
-  var(--color--primary) 32px
-  ),
-  repeating-linear-gradient(
-  274deg,
-  var(--color--primary),
-  var(--color--primary) 17px,
-  transparent 17px,
-  transparent 32px,
-  var(--color--primary) 32px
-);
-background-size: 3px calc(100% + 32.08px), calc(100% + 32.08px) 3px, 
-calc(100% + 32.08px) 3px, calc(100% + 32.08px) 3px;
-background-position: 0 0, 0 0, 100% 0, 0 100%;
-background-repeat: no-repeat;
 }
