@@ -1,0 +1,65 @@
+<DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>typewriter</title>
+    </head>
+    <body>
+      <h1>teste</h1>
+      <style>
+        body {
+          background: #0e1013;
+        }
+        h1 {
+          max-width: 480px;
+          text-align: center;
+          margin: 60px auto;
+          font-family: "courier new", "Courier New", Courier, monospace;
+          color: #fff;
+        }
+
+        h1::after {
+          content: "|";
+          opacity: 1;
+          margin-left: 5px;
+          display: inline-block;
+          animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+          0%,
+          100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0;
+          }
+        }
+      </style>
+
+      <script>
+        function typewriter(elemento) {
+          const textoArray = elemento.innerHTml.sp.split("");
+          elemento.innerHTml = "";
+          textoArray.forEach((letra, i) => {
+            setTimeout(() => (elemento.innerHTml += letra), 75 * i);
+          });
+        }
+
+        // Se estiver tendo problemas com performance, ultilize o FOR loop como abaixo no local dp forEach
+        // funcion typeWriter(elemento) {
+        // const textoArray = elemento.innHTML.split('');
+        // elemento.innerHTML = '';
+        // for(let i = 0; i< textArry.length; i++) {
+        // setTimeout(() => elemento.innerHTMl += textArray[i], 75 * i);
+        // }
+        //}
+
+        const titulo = document.querySelector("h1");
+        typewriter(titulo);
+      </script>
+    </body>
+  </html></DOCTYPE
+>
